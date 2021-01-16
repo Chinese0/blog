@@ -8,6 +8,9 @@ const path = require('path')
 const bodyParser = require('body-parser')
 // 创建App服务器
 const app = express()
+// 导入morgan这个第三方模块
+const morgan = require('morgan')
+
 // 用app拦截所有请求 secret配置项 值是自定义
 app.use(session({
   secret: 'secret key',
@@ -24,6 +27,14 @@ app.use(bodyParser.urlencoded({
 }))
 // 开放静态资源文件
 app.use(express.static(path.join(__dirname, 'public')))
+
+if (process.env.NODE_ENV == 'development') {
+  console.log('当前是开发');
+  // 在开发环境中，将客户端发送的请求信息打印到控制台中
+  app.use(morgan('dev'))
+} else {
+  console.log('当前是生产');
+}
 
 // 导入数据库
 require('./model/connect')
