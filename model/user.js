@@ -39,14 +39,14 @@ async function createUser() {
   const salt = await bcrypt.genSalt(10)
   const pass = await bcrypt.hash('123456', salt)
   const user = await User.create({
-    username: 'syx',
+    username: '申雨茜',
     email: '891278127@qq.com',
     password: pass,
-    role: '小丑',
+    role: 'admin',
     state: 0
   })
 }
-// createUser() 
+// createUser()
 
 // 验证用户信息
 const validateUser = user => {

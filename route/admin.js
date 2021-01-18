@@ -10,6 +10,7 @@ admin.get('/logout', require('./admin/logoutPage')) // 实现退出功能
 admin.post('/login', require('./admin/login')) // 实现登录功能
 admin.get('/user-edit', require('./admin/user-edit')) // 用户编辑页面
 admin.get('/delete', require('./admin/user-delete')) // 用户删除功能
+admin.get('/article-delete', require('./admin/article-delete')) // 用户删除功能
 admin.get('/article', require('./admin/article')) // 文章列表
 admin.get('/article-edit', require('./admin/article-edit')) // 文章编辑
 admin.post('/user-edit', require('./admin/edit-post')) // 用户添加功能

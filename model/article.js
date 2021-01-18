@@ -1,7 +1,5 @@
 // 创建用户集合
 const mongoose = require('mongoose')
-// 引入joi模块
-const Joi = require('joi')
 // 创建集合规则
 const articleSchema = new mongoose.Schema({ // schema 是构造函数
   title: {

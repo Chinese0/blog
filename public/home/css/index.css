@@ -1,20 +1,43 @@
 /* 文章列表开始 */
+@media screen and (max-width:768px) {
+	.list {
+		width: 90% !important;
+	}
+
+	.list li {
+		width: 100% !important;
+	}
+}
+
+@media screen and (min-width:768px) {
+	.list {
+		width: 90vw;
+		/* background-color: red; */
+	}
+
+	.list li {
+		width: 40% !important;
+	}
+}
+
 .list {
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 .list li {
-	width: 530px;
+	/* width: 530px; */
 	height: 430px;
 	background: #FFF;
 	margin-top: 30px;
 	box-shadow: 2px 2px 3px #e1e1e1;
+	box-sizing: border-box;
 }
 
-.list .thumbnail, 
+.list .thumbnail,
 .list .thumbnail img {
 	display: block;
-	width: 530px;
+	margin: 10px auto;
+	/* width: 530px; */
 	height: 240px;
 }
 
@@ -46,4 +69,5 @@
 .page .active {
 	color: #ff7300;
 }
+
 /* 分页结束 */

@@ -8,7 +8,7 @@
         <div class="main">
             <!-- 分类标题 -->
             <div class="title">
-                <h4>5b9a716cb2d2bf17706bcc0a</h4>
+                <h4>{{@userInfo._id}}</h4>
             </div>
             <!-- /分类标题 -->
             <form class="form-container" action="/admin/article-add" enctype="multipart/form-data" method="post">
@@ -18,7 +18,8 @@
                 </div>
                 <div class="form-group">
                     <label>作者</label>
-                    <input type="text" class="form-control" name="author" value="{{@userInfo._id}}" readonly>
+                    <input type="text" class="form-control" name="author1" value="{{@userInfo.username}}" readonly>
+                    <input type="hidden" name="author" value="{{@userInfo._id}}">
                 </div>
                 <div class="form-group">
                     <label>发布时间</label>

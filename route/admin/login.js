@@ -21,6 +21,7 @@ module.exports = async (req, res) => {
     let ifValid = await bcrypt.compare(password, user.password) // 密码判定
     if (ifValid) {
       req.session.username = user.username
+      req.session.role = user.role
       req.app.locals.userInfo = user // 在userInfo中保存用户信息 暴露给全局
       res.redirect('/admin/user')
     } else {
